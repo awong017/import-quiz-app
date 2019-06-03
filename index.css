@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+* {
+  font-family: 'Oswald', sans-serif;
+}
+
+
+body {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+     url('https://www.forcegt.com/wp-content/uploads/2017/04/daikoku_futo_jzx100_chaser_aristo.jpg') fixed;
+  background-size: cover;
+  color: white;
+}
+
+footer {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  font-size: 175%;
+}
+
+ul {
+  padding: 0px;
+}
+
+.scoreTracker {
+  float: left;
+  position: relative;
+  margin-left: 20px;
+}
+
+.questionTracker {
+  float: right;
+  position: relative;
+  margin-right: 20px;
+}
+
+.startPage {
+  text-align: center;
+}
+
+.title {
+  margin-top: 150px;
+  margin-bottom: 0px;
+  font-size: 300%;
+}
+
+.startButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  color: white;
+  background-color: transparent;
+  border: 2px white solid;
+  font-size: 200%;
+  padding: 20px 40px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.correctHeading {
+  text-align: center;
+  font-size: 200%;
+  margin-top: 250px;
+}
+
+.correctAnswer {
+  color: red;
+}
+
+.incorrectHeading {
+  color: white;
+  text-align: center;
+  font-size: 200%;
+  margin-top: 250px;
+}
+
+.next {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  color: white;
+  background-color: transparent;
+  border: 2px white solid;
+  font-size: 150%;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.count {
+  margin-top: 2000px;
+}
+
+.questionPage {
+  display: none;
+}
+
+.answerPage {
+  display: none;
+}
+
+.enterAnswer {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  color: white;
+  background-color: transparent;
+  border: 2px white solid;
+  font-size: 150%;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+} 
+
+.summaryPage {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 200%;
+}
+
+.restart {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  color: white;
+  background-color: transparent;
+  border: 2px white solid;
+  font-size: 150%;
+  padding: 20px 40px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.questionHeading {
+  text-align: center;
+  font-size: 200%;
+  margin-top: 100px;
+}
+
+fieldset {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  border: none;
+}
+
+.answerOption {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 150%;
+  cursor: pointer;
+  border: 2px white solid;
+  width: 75%;
+  }
+
+.answerOption:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.answerSelected {
+  background-color: white;
+  color:black;
+}
+
+.radioChoice { 
+  display: none;
+}
+
+.scoreSummary {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.poorScore {
+  margin-top: 0px;
+  font-size: 200%;
+  color: red;
+}
+
+.fairScore {
+  margin-top: 0px;
+  font-size: 200%;
+  color: yellow;
+}
+
+.excellentScore {
+  margin-top: 0px;
+  font-size: 200%;
+  color: green;
+}
+
+@media screen and (min-width: 992px) {
+
+  .questionHeading {
+    margin-top: 200px;
+  }
+
+  .summaryPage {
+    margin-top: 200px;
+  }
+
+  .answerOption {
+    width: 50%;
+  }
+  .scoreTracker {
+    margin-left: 450px;
+  }
+
+  .questionTracker {
+    margin-right: 450px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    background-size: auto;
+  }
+}
