@@ -1,4 +1,4 @@
-//Storing the questions, choices, and answers
+//  Storing the questions, choices, and answers
 let STORE = [
   {
     questionNum: 1,
@@ -65,8 +65,8 @@ let STORE = [
 let questionNumber = 0;
 let scoreTotal = 0;
 
-//Event listener that listens for the start button and 
-//starts the quiz
+//  Event listener that listens for the start button and 
+//  starts the quiz
 function handleStartQuizClick() {
   $('.startPage').on('click', '.startButton', function(event){
     $('.startPage').css('display', 'none');
@@ -75,12 +75,10 @@ function handleStartQuizClick() {
     $('.questionPage').css('display','block');
     $('.questionCount').text(1);
     $('.enterAnswer').css('display', 'block');
-    console.log('Starting the Quiz');
   });
-  console.log('This function starts the quiz');
 }
 
-//Function that creates the format of the question page
+//  Function that creates the format of the question page
 function renderQuestion() {
     if (questionNumber<STORE.length) {
     return `<div class='question'>
@@ -111,18 +109,16 @@ function renderQuestion() {
         createSummary();
         $('.restart').css('display','block');
       }
-    console.log('This function renders the question');
 }
 
-//Creates the question page in the DOM
+//  Creates the question page in the DOM
 function createQuestionPage() {
   $('.questionPage').html(renderQuestion());
   $(handleAnswerSelection);
-  console.log('This function creates the question page');
 }
 
-//Event listener that listens for when an answer selection
-//is clicked on on the question page
+//  Event listener that listens for when an answer selection
+//  is clicked on on the question page
 function handleAnswerSelection() {
   $('.answerOption').click(function(event) {
     let targetAnswer = $(event.currentTarget);
@@ -133,8 +129,8 @@ function handleAnswerSelection() {
   });
 }
 
-//Event listener that listens for the submit button after
-//an answer has been selected
+//  Event listener that listens for the submit button after
+//  an answer has been selected
 function handleSubmitAnswer() {
   $('.submitAnswer').on('click', '.enterAnswer', function (event) {
     createResultPage();
@@ -149,17 +145,15 @@ function handleSubmitAnswer() {
     $('.question').css('display', 'none');
     $('.enterAnswer').css('display', 'none');
   });
-  console.log('This function submits the user answer');
 }
 
-//The next two functions create the format of the
-//result page once an answer has been submitted
+//  The next two functions create the format of the
+//  result page once an answer has been submitted
 function renderCorrect() {
     return `<div class= 'result'>
       <h2 class='correctHeading'>You are correct!</h2>
       <button type='button' button class='next'></button>
     <div>`;
-  console.log('This function renders the answer page after a question has been answered correctly');
 }
 
 function renderIncorrect() {
@@ -167,12 +161,11 @@ function renderIncorrect() {
       <h2 class='incorrectHeading'>You are wrong! The correct answer is <p class="correctAnswer">${STORE[questionNumber].answer}<p></h2>
       <button type='button' button class='next'></button>
     <div>`;
-  console.log('This function renders the answer page after a question has been answered incorrectly');
 }
 
-//Function renders a result page in the DOM depending
-//on if the user selected the correct answer or incorrect
-//answer
+//  Function renders a result page in the DOM depending
+//  on if the user selected the correct answer or incorrect
+//  answer
 function createResultPage() {
   let choice = $("[type='radio']:checked").val();
   let correctAnswer = `${STORE[questionNumber].answer}`;
@@ -183,12 +176,11 @@ function createResultPage() {
     else
       {
         $('.answerPage').html(renderIncorrect());
-      }
-  console.log('This function creates the result page after a question has been answered');
+    }
 }
 
-//Event listener that listens for when the user clicks
-//the button to go to the next question.
+//  Event listener that listens for when the user clicks
+//  the button to go to the next question.
 function handleNextQuestion() {
   $('.answerPage').on('click', '.next', function(event) {
     trackQuestion();
@@ -204,13 +196,11 @@ function handleNextQuestion() {
       $('.enterAnswer').css('display', 'none');
       $('footer').css('display', 'none');
     }
-    console.log('Next question button has been clicked')
   });
-  console.log('This function goes to the next question after the correct answer has been revealed');
 }
 
-//This function creates the format of the quiz summary
-//page depending on the score of the user
+//  This function creates the format of the quiz summary
+//  page depending on the score of the user
 function renderSummary() {
   if (scoreTotal<4) {
     return `<div class="summary">
@@ -234,31 +224,28 @@ function renderSummary() {
     <span class='excellentScore'>${scoreTotal}/10</span>
   </div>`
   }
-  console.log('This function renders the summary page after the quiz is complete');
 }
 
-//Function creates summary in DOM
+//  Function creates summary in DOM
 function createSummary() {
   $('.summaryPage').html(renderSummary());
 }
 
-//Function keeps track of the score while the 
-//user takes the quiz
+//  Function keeps track of the score while the 
+//  user takes the quiz
 function countScore() {
   scoreTotal ++;
   $('.scoreCount').text(scoreTotal);
-  console.log('This function keeps count of the score');
 }
 
-//Function keeps track of the question that
-//the user is on
+//  Function keeps track of the question that
+//  the user is on
 function trackQuestion() {
   questionNumber ++;
   $('.questionCount').text(questionNumber+1);
-  console.log('This function keep track of the question number');
 }
 
-//Event listener that restarts the quiz
+//  Event listener that restarts the quiz
 function handleQuizRestart () {
   $('.restartQuiz').on('click', '.restart', function (event) {
     location.reload();
