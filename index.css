@@ -227,4 +227,16 @@ fieldset {
   .questionHeading {
     margin-top: 50px;
   }
+
+  .enterAnswer {
+    margin-top: 50px;
+  }
+
+  .correctHeading {
+    margin-top: 200px;
+  }
+
+  .incorrectHeading {
+    margin-top: 150px;
+  }
 }
