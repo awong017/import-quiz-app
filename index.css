@@ -22,17 +22,20 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  padding: 0px 10px;
+  box-sizing: border-box;
 }
 
 li {
   list-style: none;
   font-size: 175%;
+  padding: 0px;
 }
 
 .tracker {
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  padding-left: 0;
 }
 
 .startPage {
