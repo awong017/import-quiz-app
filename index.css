@@ -25,25 +25,14 @@ footer {
 }
 
 li {
-  display: inline-block;
   list-style: none;
   font-size: 175%;
 }
 
-ul {
+.tracker {
+  display: flex;
+  justify-content: space-between;
   padding: 0px;
-}
-
-.scoreTracker {
-  float: left;
-  position: relative;
-  margin-left: 20px;
-}
-
-.questionTracker {
-  float: right;
-  position: relative;
-  margin-right: 20px;
 }
 
 .startPage {
@@ -106,10 +95,6 @@ button:hover {
   cursor: pointer;
 }
 
-.count {
-  margin-top: 2000px;
-}
-
 .questionPage {
   display: none;
 }
@@ -155,7 +140,7 @@ button:hover {
 .questionHeading {
   text-align: center;
   font-size: 200%;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 fieldset {
@@ -216,10 +201,6 @@ fieldset {
 
 @media screen and (min-width: 992px) {
 
-  .questionHeading {
-    margin-top: 200px;
-  }
-
   .summaryPage {
     margin-top: 200px;
   }
@@ -227,17 +208,19 @@ fieldset {
   .answerOption {
     width: 50%;
   }
-  .scoreTracker {
-    margin-left: 450px;
-  }
 
-  .questionTracker {
-    margin-right: 450px;
-  }
 }
 
 @media screen and (max-width: 576px) {
   body {
     background-size: auto;
+  }
+
+  .title {
+    margin-top: 100px;
+  }
+
+  .questionHeading {
+    margin-top: 100px;
   }
 }
