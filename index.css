@@ -32,7 +32,7 @@ li {
 .tracker {
   display: flex;
   justify-content: space-between;
-  padding: 0px;
+  padding: 0;
 }
 
 .startPage {
@@ -220,7 +220,11 @@ fieldset {
     margin-top: 100px;
   }
 
-  .questionHeading {
+  .startButton {
     margin-top: 100px;
+  }
+
+  .questionHeading {
+    margin-top: 50px;
   }
 }
