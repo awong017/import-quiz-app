@@ -11,7 +11,7 @@ body {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-     url('https://www.forcegt.com/wp-content/uploads/2017/04/daikoku_futo_jzx100_chaser_aristo.jpg') fixed;
+     url('https://wallup.net/wp-content/uploads/2016/03/12/137526-Nissan_Skyline_GT-R-Skyline_R34-Nissan_GTR_R34-Nissan-Nissan_Skyline.jpg') fixed;
   background-size: cover;
   color: white;
 }
@@ -120,12 +120,6 @@ button:hover {
 
 } 
 
-.summaryPage {
-  text-align: center;
-  margin-top: 100px;
-  font-size: 200%;
-}
-
 .restart {
   display: none;
   margin-left: auto;
@@ -179,9 +173,19 @@ fieldset {
   display: none;
 }
 
+.summaryPage {
+  text-align: center;
+  margin-top: 300px;
+}
+
+.results {
+  font-size: 200%;
+}
+
 .scoreSummary {
   margin-top: 50px;
   margin-bottom: 0px;
+  font-size: 200%;
 }
 
 .poorScore {
@@ -204,10 +208,6 @@ fieldset {
 
 @media screen and (min-width: 992px) {
 
-  .summaryPage {
-    margin-top: 200px;
-  }
-
   .answerOption {
     width: 50%;
   }
@@ -216,7 +216,13 @@ fieldset {
 
 @media screen and (max-width: 576px) {
   body {
-    background-size: auto;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+     url('https://wallpaperplay.com/walls/full/b/2/6/272750.jpg') fixed;
+     background-size: cover;
   }
 
   .title {
@@ -242,4 +248,9 @@ fieldset {
   .incorrectHeading {
     margin-top: 150px;
   }
+
+  .summaryPage {
+    margin-top: 150px
+  }
+
 }

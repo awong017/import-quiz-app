@@ -204,14 +204,14 @@ function handleNextQuestion() {
 function renderSummary() {
   if (scoreTotal<4) {
     return `<div class="summary">
-    <h2>Looks like you should sell your car and stick to the bus</h2>
+    <h2 class="results">Looks like you should sell your car and stick to the bus</h2>
     <p class="scoreSummary">Score:</p>
     <span class='poorScore'>${scoreTotal}/10</span>
   </div>`
   }
   else if (scoreTotal>=4 && scoreTotal<7) {
     return `<div class="summary">
-    <h2>Not bad, you know about as much as the average Joe</h2>
+    <h2 class="results">Not bad, you know about as much as the average Joe</h2>
     <p class="scoreSummary">Score:</p>
     <span class='fairScore'>${scoreTotal}/10</span>
   </div>`
@@ -219,7 +219,7 @@ function renderSummary() {
   else
   {
     return `<div class="summary">
-    <h2>Awesome job! You're definitely a car enthusiast</h2>
+    <h2 class="results">Awesome job! You're definitely a car enthusiast</h2>
     <p class="scoreSummary">Score:</p>
     <span class='excellentScore'>${scoreTotal}/10</span>
   </div>`
