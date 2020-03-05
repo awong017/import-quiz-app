@@ -11,7 +11,7 @@ body {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-     url('https://wallup.net/wp-content/uploads/2016/03/12/137526-Nissan_Skyline_GT-R-Skyline_R34-Nissan_GTR_R34-Nissan-Nissan_Skyline.jpg') fixed;
+     url("./images/R34-front.jpg") fixed;
   background-size: cover;
   color: white;
 }
@@ -221,7 +221,7 @@ fieldset {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-     url('https://wallpaperplay.com/walls/full/b/2/6/272750.jpg') fixed;
+     url("./images/R34-side.jpg") fixed;
      background-size: cover;
   }
 
